@@ -5,5 +5,5 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (request, response, next) => {
-  response.send("Hello world !!");
+  response.send("Bienvenue dans notre API");
 });
