@@ -7,18 +7,17 @@ Entités :
 
 User : pour gérer les organisateurs et les participants.
 
-Event : pour les événements sportifs (type, date, lieu, etc.).
+Admin : pour les événements sportifs (type, date, lieu, etc.).
 
 Player : pour les informations des joueurs inscrits.
 
-Score : pour enregistrer et gérer les scores des événements.
-
+Arbitre :
 Fonctionnalités :Authentification JWT pour sécuriser les actions d’ajout/modification.
 
 Gestion des rôles : organisateurs (gérer les événements) et joueurs (s'inscrire et voir les scores).
 Respect des conventions RESTful avec des endpoints tels que /events, /players, /scores.
 
-Rôle:
+Rôles:
 
 Thierry:
 
