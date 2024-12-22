@@ -38,5 +38,4 @@ Arbitre.addHook("beforeUpdate", async (arbitre, { fields }) => {
     arbitre.password = await bcrypt.hash(arbitre.password, salt);
   }
 });
-
 module.exports = Arbitre;
