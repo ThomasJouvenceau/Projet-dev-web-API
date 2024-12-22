@@ -110,7 +110,7 @@ router.post("/login/equipe", async (req, res) => {
         name: equipe.name,
         role: 'equipe',
       },
-      process.env.JWT_SECRET || "MTres$ecureKey321$$V3RY$$trong",
+      process.env.JWT_SECRET || "Tres$ecureKey321$$V3RY$$trong",
       { expiresIn: '1h' }
     );
 
