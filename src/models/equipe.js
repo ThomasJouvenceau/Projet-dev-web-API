@@ -11,23 +11,23 @@ Equipe.init(
     },
     PTS: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
     },
     MIN: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
     },
     FTS: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
     },
     RBD: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
     },
     TO: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
     },
   },
   {
