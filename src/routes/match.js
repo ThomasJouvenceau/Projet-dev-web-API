@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const matchController = require("../controllers/match"); 
-const checkAuth = require("../middlewares/checkAuth"); 
+const checkAuth = require("../middlewares/Auth"); 
 
 const router = new Router();
 

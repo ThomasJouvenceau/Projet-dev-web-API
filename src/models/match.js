@@ -1,3 +1,5 @@
+const { Model, DataTypes } = require("sequelize");
+const connection = require("./db");
 class Match extends Model {}
 
 Match.init(

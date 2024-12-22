@@ -31,12 +31,12 @@ User.init(
     tableName: "user",    
   }
 );
-Admin.addHook("beforeCreate", async (admin) => {
-  admin.password = await bcrypt.hash(admin.password, await bcrypt.genSalt());
+User.addHook("beforeCreate", async (user) => {
+  admin.password = await bcrypt.hash(user.password, await bcrypt.genSalt());
 });
 
-Admin.addHook("beforeUpdate", async (admin, { fields }) => {
+User.addHook("beforeUpdate", async (user, { fields }) => {
   if (fields.includes("password"))
-    admin.password = await bcrypt.hash(admin.password, await bcrypt.genSalt());
+    user.password = await bcrypt.hash(user.password, await bcrypt.genSalt());
 });
 module.exports = User;

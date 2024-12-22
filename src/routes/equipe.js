@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const equipeController = require("../controllers/equipeController"); // à définir dans votre contrôleur
-const checkAuth = require("../middlewares/checkAuth"); // middleware d'authentification (si nécessaire)
+const equipeController = require("../controllers/equipe"); 
+const checkAuth = require("../middlewares/Auth"); 
 
 const router = new Router();
 

@@ -6,7 +6,10 @@ class Admin extends Model {}
 
 Admin.init(
   {
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,    
+    },
     email: {
       type: DataTypes.STRING,
       unique: true,
