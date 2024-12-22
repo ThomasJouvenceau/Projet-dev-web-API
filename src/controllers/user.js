@@ -14,6 +14,7 @@ module.exports = {
 
   create: async (req, res, next) => {
     try {
+      console.log(req.body)
       const user = await User.create(req.body);
       res.status(201).json(user);
     } catch (error) {

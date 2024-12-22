@@ -32,6 +32,7 @@ Equipe.init(
   },
   {
     sequelize: connection,
+    tableName: "equipes",  
   }
 );
 

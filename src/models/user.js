@@ -16,6 +16,19 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,    
     },
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+      validate: {
+        isEmail: true,
+      },
+    },
+    role: {
+      type: DataTypes.ENUM(["ROLE_USER", "ROLE_ADMIN"]),
+      defaultValue: "ROLE_USER",
+      allowNull: false,
+    },
     password: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -32,7 +45,7 @@ User.init(
   }
 );
 User.addHook("beforeCreate", async (user) => {
-  admin.password = await bcrypt.hash(user.password, await bcrypt.genSalt());
+  user.password = await bcrypt.hash(user.password, await bcrypt.genSalt());
 });
 
 User.addHook("beforeUpdate", async (user, { fields }) => {

@@ -23,11 +23,6 @@ Admin.init(
       allowNull: false,
       validate: {},
     },
-    role: {
-      type: DataTypes.ENUM(["ROLE_USER", "ROLE_ADMIN"]),
-      defaultValue: "ROLE_ADMIN",
-      allowNull: false,
-    },
     activated: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

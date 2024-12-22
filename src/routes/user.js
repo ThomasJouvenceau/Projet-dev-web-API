@@ -5,7 +5,7 @@ const checkAuth = require("../middlewares/Auth");
 const router = new Router();
 
 router.get("/users", userController.getAll);
-router.post("/users", checkAuth, userController.create);
+router.post("/users", userController.create);
 router.get("/users/:id", userController.getOne);
 router.patch("/users/:id", checkAuth, userController.update);
 router.delete("/users/:id", checkAuth, userController.delete);

@@ -19,6 +19,7 @@ app.use(equipeRouter);
 app.use(adminRouter); 
 app.use(arbitreRouter);
 app.use(matchRouter);
+app.use(require("./routes/Secure"));
 
 app.listen(process.env.PORT, () =>
     console.log("Server listening on port " + process.env.PORT)
