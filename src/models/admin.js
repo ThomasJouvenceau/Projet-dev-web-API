@@ -18,9 +18,7 @@ Admin.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-   
-      },
+      validate: {},
     },
     role: {
       type: DataTypes.ENUM(["ROLE_USER", "ROLE_ADMIN"]),
